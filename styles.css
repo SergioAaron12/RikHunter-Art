@@ -1,0 +1,725 @@
+/* Iconos sociales grandes y separados como en cliente.css */
+.footer-social-inline {
+    display: flex;
+    gap: 2.2rem;
+    margin-top: 0.5rem;
+}
+.footer-social-inline .footer-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2.2rem;
+    margin: 0;
+    box-shadow: none;
+    background: rgba(244,235,216,0.07);
+    color: var(--naranja-logo);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    text-decoration: none;
+}
+.footer-social-inline .footer-icon.ig,
+.footer-social-inline .footer-icon.wa {
+    width: 60px !important;
+    height: 60px !important;
+    font-size: 2.2rem !important;
+}
+.footer-social-inline .footer-icon.ig:hover {
+    background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fff;
+    transform: scale(1.08);
+}
+.footer-social-inline .footer-icon.wa:hover {
+    background: #25d366;
+    color: #fff;
+    transform: scale(1.08);
+}
+.footer-social-inline {
+    display: flex;
+    gap: 2.2rem;
+    margin-top: 0.5rem;
+}
+.footer-social-inline .footer-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+    margin: 0;
+    box-shadow: none;
+    background: rgba(244,235,216,0.07);
+    color: var(--naranja-logo);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    text-decoration: none;
+}
+.footer-social-inline .footer-icon.fb:hover {
+    background: #1877f2;
+    color: #fff;
+    transform: scale(1.08);
+}
+.footer-social-inline .footer-icon.ig:hover {
+    background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fff;
+    transform: scale(1.08);
+}
+.footer-social-inline .footer-icon.wa:hover {
+    background: #25d366;
+    color: #fff;
+    transform: scale(1.08);
+}
+/* styles.css - Estilos principales para RikHunter Art */
+:root {
+    --cafe-fondo: #2c1e16;
+    --cafe-header: #1f140e;
+    --crema: #f4ebd8;
+    --naranja-logo: #e88624;
+    --texto-claro: #f4ebd8;
+    --texto-oscuro: #2c1e16;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background: url('fondo_azul.png') center center/cover no-repeat fixed;
+    color: var(--texto-oscuro);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3, .serif-font {
+    font-family: 'Playfair Display', serif;
+    font-weight: normal;
+}
+
+header {
+    background-color: var(--cafe-header);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--naranja-logo);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 180px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+nav a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--naranja-logo);
+}
+
+.hero {
+    background-color: var(--cafe-fondo);
+    background-image: linear-gradient(to bottom, rgba(44, 30, 22, 0.8), rgba(44, 30, 22, 1));
+    color: var(--texto-claro);
+    text-align: center;
+    padding: 6rem 2rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin: 0 0 1rem 0;
+    letter-spacing: 2px;
+    color: var(--texto-claro);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    color: #d8cdb8;
+}
+
+.btn-principal {
+    background-color: transparent;
+    color: var(--naranja-logo);
+    border: 2px solid var(--naranja-logo);
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.btn-principal:hover {
+    background-color: var(--naranja-logo);
+    color: var(--cafe-header);
+}
+
+.galeria-contenedor {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.grid-obras {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 3rem;
+}
+
+.obra-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.obra-card:hover {
+    transform: translateY(-10px);
+}
+
+.obra-img-placeholder {
+    width: 100%;
+    height: 280px;
+    background-color: #e2d9c8;
+    border: 8px solid #2c1e16;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b7d6b;
+}
+
+.obra-titulo {
+    font-size: 1.4rem;
+    color: var(--texto-oscuro);
+    margin-bottom: 0.5rem;
+}
+
+.obra-precio {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.btn-comprar {
+    background-color: var(--naranja-logo);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-comprar:hover {
+    background-color: #c76f1a;
+}
+
+footer {
+    background-color: var(--cafe-header);
+    color: var(--texto-claro);
+    margin-top: 4rem;
+    border-top: 3px solid var(--naranja-logo);
+    box-shadow: 0 -4px 24px 0 rgba(44,30,22,0.12);
+    font-size: 1.1rem;
+    padding: 0;
+}
+
+.footer-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 1.5rem 2rem;
+    gap: 2rem;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 180px;
+    margin-bottom: 1.5rem;
+}
+.footer-col.brand {
+    max-width: 260px;
+}
+.footer-logo {
+    width: 200px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+.footer-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+.footer-desc {
+    font-size: 1rem;
+    color: #e2d9c8;
+    margin-bottom: 0.5rem;
+}
+.footer-col-title {
+    font-weight: bold;
+    font-size: 1.05rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    display: block;
+    color: var(--texto-claro);
+}
+.footer-col a {
+    color: var(--texto-claro);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.footer-col a:hover {
+    color: var(--naranja-logo);
+}
+.footer-col p {
+    margin: 0.2rem 0 0.2rem 0;
+    font-size: 1rem;
+}
+.footer-icon.wa {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #25d36622;
+    color: #25d366;
+    font-size: 1.1rem;
+    margin-right: 0.3rem;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    text-decoration: none;
+}
+.footer-icon.wa:hover {
+    background: #25d366;
+    color: #fff;
+    transform: scale(1.08);
+}
+.footer-bottom {
+    background: #1a120a;
+    text-align: center;
+    padding: 1.1rem 1rem 1.1rem 1rem;
+    border-top: 1px solid #2c1e16;
+}
+.footer-bottom p {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: #e2d9c8;
+    letter-spacing: 1.2px;
+    opacity: 0.95;
+}
+footer .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+footer .footer-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(244,235,216,0.07);
+    color: var(--naranja-logo);
+    font-size: 2rem;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 8px 0 rgba(44,30,22,0.10);
+    text-decoration: none;
+}
+
+footer .footer-icon.fb:hover {
+    background: #1877f2;
+    color: #fff;
+    transform: scale(1.08);
+}
+footer .footer-icon.ig:hover {
+    background: radial-gradient(circle at 30% 110%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: #fff;
+    transform: scale(1.08);
+}
+footer .footer-icon.wa:hover {
+    background: #25d366;
+    color: #fff;
+    transform: scale(1.08);
+}
+/* --- ESTILOS TABLA DE PRECIOS DARK (VERSIÓN COMPACTA) --- */
+.seccion-precios-dark {
+    background-color: #0a0a0a;
+    background-image: radial-gradient(circle at top right, #1f1f1f 0%, #0a0a0a 60%);
+    color: #ffffff;
+    padding: 3rem 1.5rem; /* Reducido el espacio superior e inferior */
+    font-family: 'Lato', sans-serif;
+    overflow: hidden;
+}
+
+.precios-header {
+    text-align: center;
+    margin-bottom: 2rem; /* Reducido */
+}
+
+.precios-cursiva {
+    font-family: 'Great Vibes', cursive;
+    color: #e3b04b;
+    font-size: 3.2rem; /* Antes 4.5rem */
+    margin: 0;
+    font-weight: normal;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.precios-titulo {
+    font-size: 2.2rem; /* Antes 3rem */
+    margin: -8px 0 0 0;
+    letter-spacing: 2px;
+    font-family: 'Lato', sans-serif;
+}
+
+.resalte-oro {
+    color: #e3b04b;
+}
+
+.precios-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 900px; /* Reducido para que las cajas no se estiren tanto */
+    margin: 0 auto;
+    gap: 2rem; /* Antes 3rem */
+}
+
+.precios-lista {
+    flex: 1;
+    min-width: 300px;
+}
+
+.precios-imagenes {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+/* Cajas de precios */
+.precio-grupo {
+    margin-bottom: 1.8rem; /* Reducido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.precio-etiqueta {
+    background: linear-gradient(to right, #4a2c11, #804b20, #4a2c11);
+    color: #fff;
+    padding: 0.4rem 1.8rem; /* Reducido */
+    border-radius: 20px;
+    font-size: 0.95rem; /* Antes 1.1rem */
+    letter-spacing: 1.2px;
+    margin-bottom: -15px; 
+    z-index: 2;
+    border: 1px solid #e3b04b;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    text-align: center;
+}
+
+.etiqueta-cursiva {
+    display: block;
+    font-family: 'Great Vibes', cursive;
+    color: #fcebb6;
+    font-size: 1.4rem; /* Antes 1.8rem */
+    text-transform: none;
+    margin-top: -3px;
+}
+
+.precio-caja {
+    background: #141414;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 2.2rem 1.5rem 1.2rem 1.5rem; /* Reducido el relleno interno */
+    width: 100%;
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.03), 0 10px 20px rgba(0,0,0,0.6);
+}
+
+.precio-fila {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem; /* Reducido */
+    font-size: 1.1rem; /* Antes 1.4rem */
+}
+
+.medida {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+}
+
+.medida::before {
+    content: '◉';
+    color: #777;
+    margin-right: 8px;
+    font-size: 0.7rem; /* Reducido */
+}
+
+.puntos {
+    flex-grow: 1;
+    border-bottom: 2px dotted #555;
+    margin: 0 12px;
+    position: relative;
+    top: -4px;
+}
+
+.valor {
+    color: #e3b04b;
+    font-weight: bold;
+    font-size: 1.25rem; /* Antes 1.6rem */
+}
+
+/* Estilos de las imágenes apiladas */
+.img-marco {
+    max-width: 200px; /* Antes 280px */
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
+    transition: transform 0.4s;
+    position: relative;
+}
+
+.img-marco:hover {
+    transform: scale(1.05) !important;
+    z-index: 10 !important;
+}
+
+.marco-1 {
+    transform: rotate(4deg);
+    z-index: 1;
+}
+
+.marco-2 {
+    transform: rotate(-3deg);
+    margin-top: -45px; /* Ajustado al nuevo tamaño de imagen */
+    z-index: 2;
+}
+
+.marco-3 {
+    transform: rotate(2deg);
+    margin-top: -45px; /* Ajustado al nuevo tamaño de imagen */
+    z-index: 3;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .precios-contenedor {
+        flex-direction: column;
+    }
+    .precio-fila {
+        font-size: 1rem;
+    }
+    .valor {
+        font-size: 1.1rem;
+    }
+    .precios-cursiva {
+        font-size: 2.5rem;
+    }
+    .precios-titulo {
+        font-size: 1.8rem;
+    }
+    .img-marco {
+        max-width: 170px; /* Más pequeño aún en celulares */
+    }
+    .marco-2, .marco-3 {
+        margin-top: -35px;
+    }
+}
+/* --- BOTÓN LLAMATIVO TABLA DE PRECIOS CON ÍCONO --- */
+.cta-precios {
+    text-align: center;
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.btn-oro-animado {
+    display: inline-flex; /* Cambiado para alinear ícono y texto */
+    align-items: center;
+    justify-content: center;
+    gap: 12px; /* Separación entre el ícono y las letras */
+    background: linear-gradient(135deg, #d4af37 0%, #fff2cd 50%, #d4af37 100%); 
+    background-size: 200% 200%;
+    color: #1a120a; 
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 1rem 2.5rem;
+    border-radius: 50px; 
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(227, 176, 75, 0.4);
+    border: 2px solid #e3b04b;
+    transition: all 0.4s ease;
+}
+
+.btn-oro-animado:hover {
+    transform: translateY(-5px) scale(1.05); 
+    box-shadow: 0 10px 25px rgba(227, 176, 75, 0.7); 
+    background-position: 100% 100%; 
+    color: #000;
+}
+
+/* Estilos para el ícono SVG de WhatsApp */
+.icono-wa-btn {
+    width: 26px;
+    height: 26px;
+    fill: currentColor; /* Esto hace que el ícono tome automáticamente el color oscuro del texto */
+}
+
+/* Ajuste para celulares */
+@media (max-width: 768px) {
+    .btn-oro-animado {
+        font-size: 1.05rem;
+        padding: 0.9rem 1.8rem;
+        gap: 10px;
+    }
+    .icono-wa-btn {
+        width: 22px;
+        height: 22px;
+    }
+}
+/* Contenedor principal para centrar la pizarra */
+.pizarra-vertical-contenedor {
+    display: flex;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background-color: transparent;
+}
+
+/* El fondo negro/pizarra */
+.pizarra-vertical {
+    background-color: #1a1a1a;
+    background-image: radial-gradient(circle, #2c2c2c 0%, #111 100%);
+    color: #fdfdfd;
+    max-width: 500px;
+    width: 100%;
+    padding: 3rem 2rem;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    /* Borde decorativo exterior */
+    outline: 1px solid #ccc;
+    outline-offset: -8px;
+}
+
+/* Estilo de los textos de medidas y precios */
+.pizarra-bloque-precios {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.fila-precio {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Etiqueta redondeada (Básico y Especial) */
+.pizarra-etiqueta-redonda {
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0.4rem 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    /* Truco para crear una línea doble simulada */
+    box-shadow: 0 0 0 3px #1a1a1a, 0 0 0 5px #ddd; 
+}
+
+/* Etiqueta cuadrada elegante (Greca Española) */
+.pizarra-etiqueta-cuadrada {
+    margin: 2rem auto;
+    padding: 1.5rem 1rem;
+    border: 2px solid #ddd;
+    position: relative;
+    /* Truco para el borde doble */
+    box-shadow: 0 0 0 4px #1a1a1a, 0 0 0 6px #ddd;
+}
+
+.texto-greca {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Líneas separadoras sutiles */
+.pizarra-divisor {
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    width: 70%;
+    margin: 2rem auto;
+}
+/* --- NUEVOS ESTILOS PARA EL DISEÑO SIDE-BY-SIDE --- */
+
+/* Contenedor Flex Principal */
+.precios-flex-container {
+    display: flex;
+    justify-content: space-between; /* Espacia las columnas */
+    align-items: flex-start; /* Alinea las columnas arriba */
+    gap: 3rem; /* Espacio de separación entre columnas */
+    max-width: 1400px; /* Ancho máximo para que no se separen demasiado en pantallas enormes */
+    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    padding: 2rem;
+}
+
+/* Estilos de cada columna */
+.precios-columna {
+    flex: 1; /* Cada columna ocupa el mismo ancho */
+    min-width: 320px; /* Ancho mínimo para que no se compriman demasiado */
+}
+
+/* Ajustes responsivos para celulares */
+@media (max-width: 900px) {
+    .precios-flex-container {
+        flex-direction: column; /* Se apilan verticalmente en pantallas pequeñas */
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .precios-columna {
+        width: 100%;
+        max-width: 500px; /* Controla el ancho en modo vertical */
+    }
+}
