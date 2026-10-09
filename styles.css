@@ -696,30 +696,300 @@ footer .footer-icon.wa:hover {
 /* Contenedor Flex Principal */
 .precios-flex-container {
     display: flex;
-    justify-content: space-between; /* Espacia las columnas */
-    align-items: flex-start; /* Alinea las columnas arriba */
-    gap: 3rem; /* Espacio de separación entre columnas */
-    max-width: 1400px; /* Ancho máximo para que no se separen demasiado en pantallas enormes */
-    margin: 0 auto; /* Centra el contenedor en la pantalla */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 2rem;
 }
 
 /* Estilos de cada columna */
 .precios-columna {
-    flex: 1; /* Cada columna ocupa el mismo ancho */
-    min-width: 320px; /* Ancho mínimo para que no se compriman demasiado */
+    flex: 1;
+    min-width: 320px;
+}
+
+/* --- ESTILOS DE AFICHES Y TABLA DE PRECIOS RENOVADA --- */
+.precios-subtitulo {
+    text-align: center;
+    color: #d1c7b7;
+    font-size: 1.15rem;
+    margin: 0.5rem auto 2rem auto;
+    max-width: 680px;
+    font-weight: 300;
+}
+
+/* Selector de vista (Afiches vs Tabla) */
+.precios-switch-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-switch {
+    background: rgba(255, 255, 255, 0.06);
+    color: #e0e0e0;
+    border: 1px solid rgba(227, 176, 75, 0.35);
+    padding: 0.75rem 1.8rem;
+    border-radius: 30px;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-switch:hover {
+    background: rgba(227, 176, 75, 0.18);
+    border-color: #e3b04b;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.btn-switch.active {
+    background: linear-gradient(135deg, #d4af37 0%, #fff2cd 50%, #d4af37 100%);
+    color: #1a120a;
+    border-color: #f5d77f;
+    box-shadow: 0 4px 18px rgba(227, 176, 75, 0.45);
+    font-weight: 700;
+}
+
+/* Grid de Afiches de Precios */
+.precios-posters-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.precio-poster-card {
+    flex: 1 1 420px;
+    max-width: 520px;
+    background: linear-gradient(180deg, rgba(28, 24, 20, 0.92) 0%, rgba(14, 12, 10, 0.96) 100%);
+    border: 1px solid rgba(227, 176, 75, 0.3);
+    border-radius: 24px;
+    padding: 1.8rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75), 0 0 25px rgba(227, 176, 75, 0.1);
+    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.precio-poster-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(227, 176, 75, 0.7);
+    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.85), 0 0 32px rgba(227, 176, 75, 0.22);
+}
+
+.poster-header-badge {
+    text-align: center;
+    margin-bottom: 1.3rem;
+    width: 100%;
+}
+
+.badge-tipo {
+    display: inline-block;
+    background: linear-gradient(90deg, #4a2c11, #804b20, #4a2c11);
+    border: 1px solid #e3b04b;
+    color: #fff;
+    padding: 0.45rem 1.6rem;
+    border-radius: 20px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.badge-tipo.bn {
+    background: linear-gradient(90deg, #2b2b2b, #484848, #2b2b2b);
+    border-color: #c0c0c0;
+    color: #f5f5f5;
+}
+
+.poster-subtitulo {
+    color: #bbb;
+    font-size: 0.92rem;
+    margin-top: 0.6rem;
+    margin-bottom: 0;
+}
+
+.precio-poster-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 460px;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(227, 176, 75, 0.2);
+    background: #000;
+}
+
+.precio-poster-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.precio-poster-wrap:hover .precio-poster-img {
+    transform: scale(1.025);
+    filter: brightness(1.04);
+}
+
+.poster-zoom-hint {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(0, 0, 0, 0.82);
+    color: #fff;
+    border: 1px solid rgba(227, 176, 75, 0.7);
+    padding: 0.4rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    backdrop-filter: blur(4px);
+    pointer-events: none;
+    transition: background 0.3s;
+}
+
+.poster-zoom-hint svg {
+    width: 14px;
+    height: 14px;
+    fill: #e3b04b;
+}
+
+.precios-resumen-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.55rem;
+    margin-top: 1.3rem;
+    margin-bottom: 0.8rem;
+    width: 100%;
+}
+
+.resumen-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #e0e0e0;
+    padding: 0.4rem 0.85rem;
+    border-radius: 14px;
+    font-size: 0.85rem;
+}
+
+.resumen-pill strong {
+    color: #e3b04b;
+}
+
+/* Lightbox Modal */
+.precio-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.94);
+    backdrop-filter: blur(10px);
+    z-index: 99999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.precio-lightbox.active {
+    display: flex;
+    opacity: 1;
+}
+
+.precio-lightbox-content {
+    position: relative;
+    max-width: 92vw;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.precio-lightbox-img {
+    max-width: 100%;
+    max-height: 84vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.95), 0 0 25px rgba(227, 176, 75, 0.35);
+    border: 2px solid rgba(227, 176, 75, 0.5);
+}
+
+.precio-lightbox-cerrar {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    background: #e3b04b;
+    color: #000;
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, background 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.precio-lightbox-cerrar:hover {
+    background: #fff;
+    transform: scale(1.12);
+}
+
+.precio-lightbox-caption {
+    color: #f0e6d2;
+    margin-top: 12px;
+    font-size: 1.05rem;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 0.5px;
 }
 
 /* Ajustes responsivos para celulares */
 @media (max-width: 900px) {
     .precios-flex-container {
-        flex-direction: column; /* Se apilan verticalmente en pantallas pequeñas */
+        flex-direction: column;
         align-items: center;
         gap: 2rem;
     }
     
     .precios-columna {
         width: 100%;
-        max-width: 500px; /* Controla el ancho en modo vertical */
+        max-width: 500px;
+    }
+
+    .precio-poster-card {
+        padding: 1.2rem 1rem;
+    }
+
+    .precios-subtitulo {
+        font-size: 1rem;
+        padding: 0 1rem;
     }
 }
+
