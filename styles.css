@@ -72,35 +72,43 @@
 }
 /* styles.css - Estilos principales para RikHunter Art */
 :root {
-    --cafe-fondo: #2c1e16;
-    --cafe-header: #1f140e;
-    --crema: #f4ebd8;
+    --azul-oscuro: #0a1d37;
+    --azul-header: #0d2342;
+    --azul-primario: #2563eb;
+    --azul-hover: #1d4ed8;
+    --azul-suave: #f0f7ff;
+    --azul-borde: #dbeafe;
+    --blanco: #ffffff;
+    --gris-fondo: #f8fafc;
+    --gris-borde: #e2e8f0;
+    --texto-oscuro: #0f172a;
+    --texto-secundario: #475569;
     --naranja-logo: #e88624;
-    --texto-claro: #f4ebd8;
-    --texto-oscuro: #2c1e16;
 }
 
 body {
     font-family: 'Lato', sans-serif;
-    background: url('fondo_azul.png') center center/cover no-repeat fixed;
+    background-color: #f8fafc;
+    background-image: linear-gradient(180deg, #edf4fc 0%, #f4f8fd 40%, #ffffff 100%);
     color: var(--texto-oscuro);
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
-h1, h2, h3, .serif-font {
-    font-family: 'Playfair Display', serif;
-    font-weight: normal;
+h1, h2, h3 {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
 }
 
 header {
-    background-color: var(--cafe-header);
+    background-color: var(--azul-header);
     padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid var(--naranja-logo);
+    border-bottom: 2px solid var(--azul-primario);
+    box-shadow: 0 4px 20px rgba(10, 29, 55, 0.12);
 }
 
 .logo-container {
@@ -111,21 +119,22 @@ header {
 .logo-img {
     width: 180px;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
 nav a {
-    color: var(--texto-claro);
+    color: #f1f5f9;
     text-decoration: none;
     margin-left: 2rem;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: color 0.3s;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+    letter-spacing: 0.5px;
+    transition: color 0.2s, transform 0.2s;
 }
 
 nav a:hover {
-    color: var(--naranja-logo);
+    color: #60a5fa;
 }
 
 .hero {
@@ -369,530 +378,412 @@ footer .footer-icon.wa:hover {
     color: #fff;
     transform: scale(1.08);
 }
-/* --- ESTILOS TABLA DE PRECIOS DARK (VERSIÓN COMPACTA) --- */
-.seccion-precios-dark {
-    background-color: #0a0a0a;
-    background-image: radial-gradient(circle at top right, #1f1f1f 0%, #0a0a0a 60%);
-    color: #ffffff;
-    padding: 3rem 1.5rem; /* Reducido el espacio superior e inferior */
+/* --- SECCIÓN PRECIOS MODERNA (TEMA AZUL Y BLANCO) --- */
+.seccion-precios-moderna {
+    background-color: #f0f6ff;
+    background-image: radial-gradient(circle at 10% 20%, #e0f2fe 0%, #f0f6ff 50%, #ffffff 100%);
+    color: var(--texto-oscuro);
+    padding: 3.5rem 1.5rem 5rem;
     font-family: 'Lato', sans-serif;
+    position: relative;
     overflow: hidden;
 }
 
-.precios-header {
+.precios-header-moderno {
     text-align: center;
-    margin-bottom: 2rem; /* Reducido */
+    margin-bottom: 2.2rem;
 }
 
-.precios-cursiva {
-    font-family: 'Great Vibes', cursive;
-    color: #e3b04b;
-    font-size: 3.2rem; /* Antes 4.5rem */
-    margin: 0;
-    font-weight: normal;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
-
-.precios-titulo {
-    font-size: 2.2rem; /* Antes 3rem */
-    margin: -8px 0 0 0;
-    letter-spacing: 2px;
-    font-family: 'Lato', sans-serif;
-}
-
-.resalte-oro {
-    color: #e3b04b;
-}
-
-.precios-contenedor {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 900px; /* Reducido para que las cajas no se estiren tanto */
-    margin: 0 auto;
-    gap: 2rem; /* Antes 3rem */
-}
-
-.precios-lista {
-    flex: 1;
-    min-width: 300px;
-}
-
-.precios-imagenes {
-    flex: 1;
-    min-width: 300px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1rem;
-}
-
-/* Cajas de precios */
-.precio-grupo {
-    margin-bottom: 1.8rem; /* Reducido */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.precio-etiqueta {
-    background: linear-gradient(to right, #4a2c11, #804b20, #4a2c11);
-    color: #fff;
-    padding: 0.4rem 1.8rem; /* Reducido */
-    border-radius: 20px;
-    font-size: 0.95rem; /* Antes 1.1rem */
-    letter-spacing: 1.2px;
-    margin-bottom: -15px; 
-    z-index: 2;
-    border: 1px solid #e3b04b;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
-    text-align: center;
-}
-
-.etiqueta-cursiva {
-    display: block;
-    font-family: 'Great Vibes', cursive;
-    color: #fcebb6;
-    font-size: 1.4rem; /* Antes 1.8rem */
-    text-transform: none;
-    margin-top: -3px;
-}
-
-.precio-caja {
-    background: #141414;
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 2.2rem 1.5rem 1.2rem 1.5rem; /* Reducido el relleno interno */
-    width: 100%;
-    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.03), 0 10px 20px rgba(0,0,0,0.6);
-}
-
-.precio-fila {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.8rem; /* Reducido */
-    font-size: 1.1rem; /* Antes 1.4rem */
-}
-
-.medida {
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-}
-
-.medida::before {
-    content: '◉';
-    color: #777;
-    margin-right: 8px;
-    font-size: 0.7rem; /* Reducido */
-}
-
-.puntos {
-    flex-grow: 1;
-    border-bottom: 2px dotted #555;
-    margin: 0 12px;
-    position: relative;
-    top: -4px;
-}
-
-.valor {
-    color: #e3b04b;
-    font-weight: bold;
-    font-size: 1.25rem; /* Antes 1.6rem */
-}
-
-/* Estilos de las imágenes apiladas */
-.img-marco {
-    max-width: 200px; /* Antes 280px */
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.7);
-    transition: transform 0.4s;
-    position: relative;
-}
-
-.img-marco:hover {
-    transform: scale(1.05) !important;
-    z-index: 10 !important;
-}
-
-.marco-1 {
-    transform: rotate(4deg);
-    z-index: 1;
-}
-
-.marco-2 {
-    transform: rotate(-3deg);
-    margin-top: -45px; /* Ajustado al nuevo tamaño de imagen */
-    z-index: 2;
-}
-
-.marco-3 {
-    transform: rotate(2deg);
-    margin-top: -45px; /* Ajustado al nuevo tamaño de imagen */
-    z-index: 3;
-}
-
-/* Responsividad para móviles */
-@media (max-width: 768px) {
-    .precios-contenedor {
-        flex-direction: column;
-    }
-    .precio-fila {
-        font-size: 1rem;
-    }
-    .valor {
-        font-size: 1.1rem;
-    }
-    .precios-cursiva {
-        font-size: 2.5rem;
-    }
-    .precios-titulo {
-        font-size: 1.8rem;
-    }
-    .img-marco {
-        max-width: 170px; /* Más pequeño aún en celulares */
-    }
-    .marco-2, .marco-3 {
-        margin-top: -35px;
-    }
-}
-/* --- BOTÓN LLAMATIVO TABLA DE PRECIOS CON ÍCONO --- */
-.cta-precios {
-    text-align: center;
-    margin-top: 3.5rem;
-    margin-bottom: 1rem;
-    width: 100%;
-}
-
-.btn-oro-animado {
-    display: inline-flex; /* Cambiado para alinear ícono y texto */
-    align-items: center;
-    justify-content: center;
-    gap: 12px; /* Separación entre el ícono y las letras */
-    background: linear-gradient(135deg, #d4af37 0%, #fff2cd 50%, #d4af37 100%); 
-    background-size: 200% 200%;
-    color: #1a120a; 
-    font-family: 'Lato', sans-serif;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    padding: 1rem 2.5rem;
-    border-radius: 50px; 
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(227, 176, 75, 0.4);
-    border: 2px solid #e3b04b;
-    transition: all 0.4s ease;
-}
-
-.btn-oro-animado:hover {
-    transform: translateY(-5px) scale(1.05); 
-    box-shadow: 0 10px 25px rgba(227, 176, 75, 0.7); 
-    background-position: 100% 100%; 
-    color: #000;
-}
-
-/* Estilos para el ícono SVG de WhatsApp */
-.icono-wa-btn {
-    width: 26px;
-    height: 26px;
-    fill: currentColor; /* Esto hace que el ícono tome automáticamente el color oscuro del texto */
-}
-
-/* Ajuste para celulares */
-@media (max-width: 768px) {
-    .btn-oro-animado {
-        font-size: 1.05rem;
-        padding: 0.9rem 1.8rem;
-        gap: 10px;
-    }
-    .icono-wa-btn {
-        width: 22px;
-        height: 22px;
-    }
-}
-/* Contenedor principal para centrar la pizarra */
-.pizarra-vertical-contenedor {
-    display: flex;
-    justify-content: center;
-    padding: 3rem 1rem;
-    background-color: transparent;
-}
-
-/* El fondo negro/pizarra */
-.pizarra-vertical {
-    background-color: #1a1a1a;
-    background-image: radial-gradient(circle, #2c2c2c 0%, #111 100%);
-    color: #fdfdfd;
-    max-width: 500px;
-    width: 100%;
-    padding: 3rem 2rem;
-    border: 3px solid #ccc;
-    border-radius: 4px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
-    /* Borde decorativo exterior */
-    outline: 1px solid #ccc;
-    outline-offset: -8px;
-}
-
-/* Estilo de los textos de medidas y precios */
-.pizarra-bloque-precios {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.6rem;
-    font-weight: bold;
-    line-height: 1.4;
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
-}
-
-.fila-precio {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
-
-/* Etiqueta redondeada (Básico y Especial) */
-.pizarra-etiqueta-redonda {
+.precios-tag-pill {
     display: inline-block;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    font-weight: bold;
-    padding: 0.4rem 1.5rem;
-    margin-bottom: 1.5rem;
-    border: 2px solid #ddd;
-    border-radius: 25px;
-    /* Truco para crear una línea doble simulada */
-    box-shadow: 0 0 0 3px #1a1a1a, 0 0 0 5px #ddd; 
-}
-
-/* Etiqueta cuadrada elegante (Greca Española) */
-.pizarra-etiqueta-cuadrada {
-    margin: 2rem auto;
-    padding: 1.5rem 1rem;
-    border: 2px solid #ddd;
-    position: relative;
-    /* Truco para el borde doble */
-    box-shadow: 0 0 0 4px #1a1a1a, 0 0 0 6px #ddd;
-}
-
-.texto-greca {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5rem;
-    font-weight: bold;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 0.85rem;
+    font-weight: 700;
     letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.35rem 1.1rem;
+    border-radius: 50px;
+    margin-bottom: 0.8rem;
+    font-family: 'Outfit', sans-serif;
 }
 
-/* Líneas separadoras sutiles */
-.pizarra-divisor {
-    border: none;
-    border-top: 1px solid rgba(255,255,255,0.3);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
-    width: 70%;
-    margin: 2rem auto;
-}
-/* --- NUEVOS ESTILOS PARA EL DISEÑO SIDE-BY-SIDE --- */
-
-/* Contenedor Flex Principal */
-.precios-flex-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 3rem;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem;
+.precios-titulo-principal {
+    font-family: 'Outfit', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0a1d37;
+    margin: 0 0 0.6rem 0;
+    letter-spacing: -0.5px;
 }
 
-/* Estilos de cada columna */
-.precios-columna {
-    flex: 1;
-    min-width: 320px;
-}
-
-/* --- ESTILOS DE AFICHES Y TABLA DE PRECIOS RENOVADA --- */
-.precios-subtitulo {
-    text-align: center;
-    color: #d1c7b7;
+.precios-subtitulo-moderno {
+    color: #475569;
     font-size: 1.15rem;
-    margin: 0.5rem auto 2rem auto;
-    max-width: 680px;
-    font-weight: 300;
+    max-width: 650px;
+    margin: 0 auto;
+    font-weight: 400;
 }
 
-/* Selector de vista (Afiches vs Tabla) */
-.precios-switch-container {
+/* Switcher Moderno */
+.precios-switch-wrap {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2.5rem;
-    flex-wrap: wrap;
+    margin-bottom: 2.8rem;
 }
 
-.btn-switch {
-    background: rgba(255, 255, 255, 0.06);
-    color: #e0e0e0;
-    border: 1px solid rgba(227, 176, 75, 0.35);
-    padding: 0.75rem 1.8rem;
+.precios-switch-pills {
+    display: inline-flex;
+    background: #e2e8f0;
+    padding: 5px;
+    border-radius: 40px;
+    gap: 4px;
+}
+
+.btn-switch-moderno {
+    background: transparent;
+    border: none;
+    padding: 0.65rem 1.6rem;
     border-radius: 30px;
-    font-family: 'Lato', sans-serif;
-    font-size: 1.05rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
     font-weight: 600;
+    color: #475569;
     cursor: pointer;
-    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     gap: 8px;
+    transition: all 0.25s ease;
 }
 
-.btn-switch:hover {
-    background: rgba(227, 176, 75, 0.18);
-    border-color: #e3b04b;
+.btn-switch-moderno:hover {
+    color: #0f172a;
+}
+
+.btn-switch-moderno.active {
+    background: #2563eb;
     color: #ffffff;
-    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
 }
 
-.btn-switch.active {
-    background: linear-gradient(135deg, #d4af37 0%, #fff2cd 50%, #d4af37 100%);
-    color: #1a120a;
-    border-color: #f5d77f;
-    box-shadow: 0 4px 18px rgba(227, 176, 75, 0.45);
-    font-weight: 700;
+.switch-icon {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
 }
 
-/* Grid de Afiches de Precios */
-.precios-posters-grid {
+/* Tarjetas de Afiches Visuales */
+.precios-grid-moderno {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2.5rem;
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
 }
 
-.precio-poster-card {
+.card-afiche-moderno {
     flex: 1 1 420px;
     max-width: 520px;
-    background: linear-gradient(180deg, rgba(28, 24, 20, 0.92) 0%, rgba(14, 12, 10, 0.96) 100%);
-    border: 1px solid rgba(227, 176, 75, 0.3);
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 24px;
-    padding: 1.8rem 1.5rem;
+    padding: 2rem 1.6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.75), 0 0 25px rgba(227, 176, 75, 0.1);
-    transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+    box-shadow: 0 10px 30px rgba(15, 29, 55, 0.06), 0 2px 8px rgba(0,0,0,0.03);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
-.precio-poster-card:hover {
+.card-afiche-moderno:hover {
     transform: translateY(-6px);
-    border-color: rgba(227, 176, 75, 0.7);
-    box-shadow: 0 22px 48px rgba(0, 0, 0, 0.85), 0 0 32px rgba(227, 176, 75, 0.22);
+    box-shadow: 0 20px 45px rgba(37, 99, 235, 0.12), 0 4px 12px rgba(0,0,0,0.05);
+    border-color: #93c5fd;
 }
 
-.poster-header-badge {
+.card-afiche-header {
     text-align: center;
-    margin-bottom: 1.3rem;
     width: 100%;
+    margin-bottom: 1.3rem;
 }
 
-.badge-tipo {
+.badge-afiche {
     display: inline-block;
-    background: linear-gradient(90deg, #4a2c11, #804b20, #4a2c11);
-    border: 1px solid #e3b04b;
-    color: #fff;
-    padding: 0.45rem 1.6rem;
+    padding: 0.35rem 1rem;
     border-radius: 20px;
-    font-size: 0.95rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    letter-spacing: 1.2px;
     text-transform: uppercase;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.8px;
+    font-family: 'Outfit', sans-serif;
+    margin-bottom: 0.5rem;
 }
 
-.badge-tipo.bn {
-    background: linear-gradient(90deg, #2b2b2b, #484848, #2b2b2b);
-    border-color: #c0c0c0;
-    color: #f5f5f5;
+.badge-grafito {
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
 }
 
-.poster-subtitulo {
-    color: #bbb;
+.badge-color {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.card-afiche-titulo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0a1d37;
+    margin: 0 0 0.3rem 0;
+}
+
+.card-afiche-desc {
+    color: #64748b;
     font-size: 0.92rem;
-    margin-top: 0.6rem;
-    margin-bottom: 0;
+    margin: 0;
+    line-height: 1.4;
 }
 
-.precio-poster-wrap {
+.poster-img-container {
     position: relative;
     width: 100%;
     max-width: 460px;
     border-radius: 16px;
     overflow: hidden;
     cursor: pointer;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-    border: 1px solid rgba(227, 176, 75, 0.2);
-    background: #000;
+    box-shadow: 0 8px 25px rgba(15, 29, 55, 0.08);
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
 }
 
-.precio-poster-img {
+.poster-img-clean {
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.4s ease, filter 0.4s ease;
+    transition: transform 0.4s ease, filter 0.3s ease;
 }
 
-.precio-poster-wrap:hover .precio-poster-img {
-    transform: scale(1.025);
-    filter: brightness(1.04);
+.poster-img-container:hover .poster-img-clean {
+    transform: scale(1.02);
 }
 
-.poster-zoom-hint {
+.zoom-badge-moderno {
     position: absolute;
     bottom: 12px;
     right: 12px;
-    background: rgba(0, 0, 0, 0.82);
-    color: #fff;
-    border: 1px solid rgba(227, 176, 75, 0.7);
+    background: rgba(15, 29, 55, 0.85);
+    color: #ffffff;
     padding: 0.4rem 0.85rem;
     border-radius: 20px;
-    font-size: 0.82rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
     display: flex;
     align-items: center;
     gap: 6px;
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(6px);
     pointer-events: none;
-    transition: background 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
-.poster-zoom-hint svg {
-    width: 14px;
-    height: 14px;
-    fill: #e3b04b;
+.zoom-badge-moderno svg {
+    width: 15px;
+    height: 15px;
+    fill: #60a5fa;
 }
 
-.precios-resumen-pills {
+.pills-resumen-moderno {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.55rem;
-    margin-top: 1.3rem;
-    margin-bottom: 0.8rem;
+    gap: 0.6rem;
+    margin-top: 1.4rem;
+    margin-bottom: 1.2rem;
     width: 100%;
 }
 
-.resumen-pill {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    color: #e0e0e0;
-    padding: 0.4rem 0.85rem;
-    border-radius: 14px;
-    font-size: 0.85rem;
+.pill-dato {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 0.45rem 0.9rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    flex: 1 1 110px;
 }
 
-.resumen-pill strong {
-    color: #e3b04b;
+.pill-label {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+}
+
+.pill-precio {
+    font-size: 0.95rem;
+    color: #2563eb;
+    font-weight: 800;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Botón CTA WhatsApp Moderno */
+.btn-wa-moderno {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    padding: 0.95rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-sizing: border-box;
+}
+
+.btn-wa-moderno:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5);
+    color: #ffffff;
+}
+
+.btn-wa-icon {
+    width: 22px;
+    height: 22px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+/* TABLA MODERNA DETALLADA */
+.tabla-moderna-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.tabla-dos-columnas-moderna {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.columna-precios-moderna {
+    flex: 1 1 360px;
+    max-width: 520px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 2.2rem 1.8rem;
+    box-shadow: 0 10px 30px rgba(15, 29, 55, 0.06);
+}
+
+.columna-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.columna-titulo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0a1d37;
+    margin: 0.4rem 0 0 0;
+}
+
+.bloque-precios-moderno {
+    margin-bottom: 1.6rem;
+}
+
+.categoria-header {
+    padding: 0.55rem 1rem;
+    border-radius: 12px;
+    margin-bottom: 0.6rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.cat-azul {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    color: #1d4ed8;
+}
+
+.cat-verde {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    color: #15803d;
+}
+
+.cat-morado {
+    background: #faf5ff;
+    border: 1px solid #e9d5ff;
+    color: #7e22ce;
+}
+
+.cat-titulo {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+}
+
+.cat-sub {
+    font-size: 0.78rem;
+    opacity: 0.85;
+    font-weight: 500;
+}
+
+.items-precios-lista {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 0.8rem 1.2rem;
+}
+
+.fila-precio-moderna {
+    display: flex;
+    align-items: center;
+    padding: 0.55rem 0;
+    font-family: 'Outfit', sans-serif;
+}
+
+.fila-precio-moderna:not(:last-child) {
+    border-bottom: 1px solid #edf2f7;
+}
+
+.item-medida {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 0.98rem;
+}
+
+.linea-puntos {
+    flex-grow: 1;
+    border-bottom: 2px dotted #cbd5e1;
+    margin: 0 10px;
+    position: relative;
+    top: -2px;
+}
+
+.item-precio {
+    color: #2563eb;
+    font-weight: 800;
+    font-size: 1.15rem;
+    white-space: nowrap;
 }
 
 /* Lightbox Modal */
@@ -902,7 +793,7 @@ footer .footer-icon.wa:hover {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.94);
+    background: rgba(10, 25, 47, 0.92);
     backdrop-filter: blur(10px);
     z-index: 99999;
     display: none;
@@ -931,17 +822,17 @@ footer .footer-icon.wa:hover {
     max-width: 100%;
     max-height: 84vh;
     object-fit: contain;
-    border-radius: 12px;
-    box-shadow: 0 0 45px rgba(0, 0, 0, 0.95), 0 0 25px rgba(227, 176, 75, 0.35);
-    border: 2px solid rgba(227, 176, 75, 0.5);
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .precio-lightbox-cerrar {
     position: absolute;
-    top: -48px;
+    top: -46px;
     right: 0;
-    background: #e3b04b;
-    color: #000;
+    background: #ffffff;
+    color: #0f172a;
     border: none;
     width: 38px;
     height: 38px;
@@ -953,43 +844,79 @@ footer .footer-icon.wa:hover {
     align-items: center;
     justify-content: center;
     transition: transform 0.2s, background 0.2s;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 }
 
 .precio-lightbox-cerrar:hover {
-    background: #fff;
-    transform: scale(1.12);
+    background: #2563eb;
+    color: #ffffff;
+    transform: scale(1.1);
 }
 
 .precio-lightbox-caption {
-    color: #f0e6d2;
-    margin-top: 12px;
-    font-size: 1.05rem;
-    text-align: center;
-    font-family: 'Playfair Display', serif;
-    letter-spacing: 0.5px;
+    color: #f1f5f9;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
 }
 
-/* Ajustes responsivos para celulares */
-@media (max-width: 900px) {
-    .precios-flex-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 2rem;
-    }
-    
-    .precios-columna {
-        width: 100%;
-        max-width: 500px;
-    }
+/* Footer Modernizado */
+footer.footer--pro {
+    background: #0a1d37;
+    color: #e2e8f0;
+    border-top: 1px solid #1e3a8a;
+}
 
-    .precio-poster-card {
-        padding: 1.2rem 1rem;
-    }
+.footer-title {
+    color: #ffffff;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+}
 
-    .precios-subtitulo {
+.footer-desc {
+    color: #94a3b8;
+}
+
+.footer-col-title {
+    color: #60a5fa;
+    font-family: 'Outfit', sans-serif;
+}
+
+.footer-col a {
+    color: #cbd5e1;
+}
+
+.footer-col a:hover {
+    color: #60a5fa;
+}
+
+.footer-bottom {
+    background: #061325;
+    border-top: 1px solid #0f274a;
+}
+
+.footer-bottom p {
+    color: #94a3b8;
+}
+
+/* Responsividad para móviles */
+@media (max-width: 768px) {
+    .precios-titulo-principal {
+        font-size: 2.2rem;
+    }
+    .seccion-precios-moderna {
+        padding: 2.5rem 1rem 3.5rem;
+    }
+    .card-afiche-moderno, .columna-precios-moderna {
+        padding: 1.4rem 1.1rem;
+    }
+    .item-medida {
+        font-size: 0.9rem;
+    }
+    .item-precio {
         font-size: 1rem;
-        padding: 0 1rem;
     }
 }
+
 

@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RikHunter Art | Regala un Cuadro</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,169 +21,253 @@
         </nav>
     </header>
 
-    <section class="seccion-precios-dark">
-        <div class="main-precios-header">
-            <h2 class="precios-cursiva">Tabla de Precios</h2>
-            <p class="precios-subtitulo">Obras realistas personalizadas a lápiz grafito y a color. Elige tu formato favorito y reserva tu cuadro directamente por WhatsApp.</p>
+    <section class="seccion-precios-moderna">
+        <div class="precios-header-moderno">
+            <span class="precios-tag-pill">Tarifas 2026</span>
+            <h1 class="precios-titulo-principal">Tabla de Precios</h1>
+            <p class="precios-subtitulo-moderno">Retratos artísticos personalizados hechos 100% a mano. Elige tu técnica favorita y reserva directamente por WhatsApp.</p>
         </div>
 
-        <!-- Selector de visualización -->
-        <div class="precios-switch-container">
-            <button class="btn-switch active" id="btn-vista-afiches" type="button" onclick="cambiarVistaPrecios('afiches')">
-                🎨 Ver Afiches Oficiales
-            </button>
-            <button class="btn-switch" id="btn-vista-tabla" type="button" onclick="cambiarVistaPrecios('tabla')">
-                📋 Ver Tabla Detallada
-            </button>
+        <!-- Selector de visualización moderno -->
+        <div class="precios-switch-wrap">
+            <div class="precios-switch-pills">
+                <button class="btn-switch-moderno active" id="btn-vista-afiches" type="button" onclick="cambiarVistaPrecios('afiches')">
+                    <svg viewBox="0 0 24 24" class="switch-icon"><path d="M4 4h7v7H4V4zm0 9h7v7H4v-7zm9-9h7v7h-7V4zm0 9h7v7h-7v-7z"/></svg>
+                    Afiches Oficiales
+                </button>
+                <button class="btn-switch-moderno" id="btn-vista-tabla" type="button" onclick="cambiarVistaPrecios('tabla')">
+                    <svg viewBox="0 0 24 24" class="switch-icon"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7z"/></svg>
+                    Tabla Detallada
+                </button>
+            </div>
         </div>
 
         <!-- VISTA 1: AFICHES VISUALES CON LAS IMÁGENES -->
-        <div id="contenedor-afiches" class="precios-posters-grid">
+        <div id="contenedor-afiches" class="precios-grid-moderno">
             <!-- AFICHE 1: BLANCO Y NEGRO -->
-            <div class="precio-poster-card">
-                <div class="poster-header-badge">
-                    <span class="badge-tipo bn">Retratos Sin Color (Grafito)</span>
-                    <p class="poster-subtitulo">Dibujos realistas en blanco y negro • Máximo detalle</p>
+            <div class="card-afiche-moderno">
+                <div class="card-afiche-header">
+                    <span class="badge-afiche badge-grafito">Retratos a Grafito</span>
+                    <h3 class="card-afiche-titulo">Blanco y Negro</h3>
+                    <p class="card-afiche-desc">Técnica hiperrealista con sombras profundas y detalles minuciosos</p>
                 </div>
 
-                <div class="precio-poster-wrap" onclick="abrirModalPrecio('asset/Retratos realistas en blanco y negro.png', 'Retratos Realistas en Blanco y Negro - Tabla de Precios')">
-                    <img src="asset/Retratos realistas en blanco y negro.png" alt="Precios de retratos realistas en blanco y negro" class="precio-poster-img" loading="lazy">
-                    <div class="poster-zoom-hint">
+                <div class="poster-img-container" onclick="abrirModalPrecio('asset/Retratos realistas en blanco y negro.png', 'Precios Retratos a Grafito - Blanco y Negro')">
+                    <img src="asset/Retratos realistas en blanco y negro.png" alt="Precios de retratos realistas en blanco y negro" class="poster-img-clean" loading="lazy">
+                    <div class="zoom-badge-moderno">
                         <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
-                        Ampliar afiche
+                        Toca para ampliar
                     </div>
                 </div>
 
-                <div class="precios-resumen-pills">
-                    <span class="resumen-pill">Sin Marco: <strong>desde $25.000</strong></span>
-                    <span class="resumen-pill">Con Marco: <strong>desde $45.000</strong></span>
-                    <span class="resumen-pill">Adicional: <strong>+$5.000 c/u</strong></span>
+                <div class="pills-resumen-moderno">
+                    <div class="pill-dato">
+                        <span class="pill-label">Sin Marco</span>
+                        <span class="pill-precio">desde $25.000</span>
+                    </div>
+                    <div class="pill-dato">
+                        <span class="pill-label">Con Marco</span>
+                        <span class="pill-precio">desde $45.000</span>
+                    </div>
+                    <div class="pill-dato">
+                        <span class="pill-label">Adicional</span>
+                        <span class="pill-precio">+$5.000 c/u</span>
+                    </div>
                 </div>
 
-                <div class="cta-precios" style="margin-top: 1.5rem; margin-bottom: 0.5rem;">
-                    <a href="https://wa.me/56930147316?text=Hola%20RikHunter%20Art,%20quisiera%20reservar%20un%20cuadro%20en%20Blanco%20y%20Negro" target="_blank" rel="noopener" class="btn-oro-animado">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icono-wa-btn">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                        </svg>
-                        ¡Reservar en Blanco y Negro!
-                    </a>
-                </div>
+                <a href="https://wa.me/56930147316?text=Hola%20RikHunter%20Art,%20quisiera%20reservar%20un%20cuadro%20en%20Blanco%20y%20Negro" target="_blank" rel="noopener" class="btn-wa-moderno">
+                    <svg viewBox="0 0 24 24" class="btn-wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    <span>Reservar Blanco y Negro</span>
+                </a>
             </div>
 
             <!-- AFICHE 2: A COLOR -->
-            <div class="precio-poster-card">
-                <div class="poster-header-badge">
-                    <span class="badge-tipo">Retratos a Color</span>
-                    <p class="poster-subtitulo">Técnica artística a color con tonos vibrantes y realistas</p>
+            <div class="card-afiche-moderno">
+                <div class="card-afiche-header">
+                    <span class="badge-afiche badge-color">Técnica a Color</span>
+                    <h3 class="card-afiche-titulo">Retratos a Color</h3>
+                    <p class="card-afiche-desc">Matices vivos, tonos piel realistas y acabado vibrante de alto impacto</p>
                 </div>
 
-                <div class="precio-poster-wrap" onclick="abrirModalPrecio('asset/riqui_color.jpeg', 'Retratos Realistas a Color - Tabla de Precios')">
-                    <img src="asset/riqui_color.jpeg" alt="Precios de retratos realistas a color" class="precio-poster-img" loading="lazy">
-                    <div class="poster-zoom-hint">
+                <div class="poster-img-container" onclick="abrirModalPrecio('asset/riqui_color.png', 'Precios Retratos a Color')">
+                    <img src="asset/riqui_color.png" alt="Precios de retratos realistas a color" class="poster-img-clean" loading="lazy">
+                    <div class="zoom-badge-moderno">
                         <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/><path d="M12 10h-2v2H9v-2H7V9h2V7h1v2h2v1z"/></svg>
-                        Ampliar afiche
+                        Toca para ampliar
                     </div>
                 </div>
 
-                <div class="precios-resumen-pills">
-                    <span class="resumen-pill">Sin Marco: <strong>desde $45.000</strong></span>
-                    <span class="resumen-pill">Con Marco: <strong>desde $65.000</strong></span>
-                    <span class="resumen-pill">Adicional: <strong>Mascota o Persona</strong></span>
+                <div class="pills-resumen-moderno">
+                    <div class="pill-dato">
+                        <span class="pill-label">Sin Marco</span>
+                        <span class="pill-precio">desde $45.000</span>
+                    </div>
+                    <div class="pill-dato">
+                        <span class="pill-label">Con Marco</span>
+                        <span class="pill-precio">desde $65.000</span>
+                    </div>
+                    <div class="pill-dato">
+                        <span class="pill-label">Adicional</span>
+                        <span class="pill-precio">Mascota/Persona</span>
+                    </div>
                 </div>
 
-                <div class="cta-precios" style="margin-top: 1.5rem; margin-bottom: 0.5rem;">
-                    <a href="https://wa.me/56930147316?text=Hola%20RikHunter%20Art,%20quisiera%20reservar%20un%20cuadro%20a%20Color" target="_blank" rel="noopener" class="btn-oro-animado">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icono-wa-btn">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                        </svg>
-                        ¡Reservar a Color!
-                    </a>
-                </div>
+                <a href="https://wa.me/56930147316?text=Hola%20RikHunter%20Art,%20quisiera%20reservar%20un%20cuadro%20a%20Color" target="_blank" rel="noopener" class="btn-wa-moderno">
+                    <svg viewBox="0 0 24 24" class="btn-wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    <span>Reservar a Color</span>
+                </a>
             </div>
         </div>
 
-        <!-- VISTA 2: TABLA DE PRECIOS DETALLADA -->
-        <div id="contenedor-tabla" class="pizarra-vertical-contenedor" style="display: none;">
-            <div class="precios-dos-columnas" style="display: flex; flex-wrap: wrap; gap: 2.5rem; justify-content: center; align-items: flex-start; width: 100%; max-width: 1200px; margin: 0 auto;">
-                
+        <!-- VISTA 2: TABLA DETALLADA -->
+        <div id="contenedor-tabla" class="tabla-moderna-wrapper" style="display: none;">
+            <div class="tabla-dos-columnas-moderna">
                 <!-- COLUMNA BLANCO Y NEGRO -->
-                <div class="precios-lista" style="flex: 1 1 340px; min-width: 300px; max-width: 440px; background: rgba(0,0,0,0.22); border: 1px solid rgba(255,255,255,0.08); border-radius: 18px; padding: 1.8rem 1.2rem; margin-bottom: 1.5rem;">
-                    <h2 class="precios-titulo" style="text-align:center; color:#e0e0e0; margin-bottom:1.2rem;">RETRATOS <span style="color:#ffffff">SIN COLOR (GRAFITO)</span></h2>
-                    
-                    <div class="precio-grupo">
-                        <div class="precio-etiqueta" style="background: linear-gradient(90deg, #2b2b2b, #484848, #2b2b2b); border-color: #bdbdbd;">RETRATOS SIN MARCO<span style="display:block; font-size:0.75rem; color:#dcdcdc; letter-spacing:0.5px; text-transform:none;">Solo el arte • Listo para enmarcar</span></div>
-                        <div class="precio-caja">
-                            <div class="precio-fila"><span class="medida">Pequeño (20 x 30 cm)</span><span class="puntos"></span><span class="valor">$ 25.000</span></div>
-                            <div class="precio-fila"><span class="medida">Mediano (40 x 50 cm)</span><span class="puntos"></span><span class="valor">$ 35.000</span></div>
-                            <div class="precio-fila"><span class="medida">Grande (50 x 70 cm)</span><span class="puntos"></span><span class="valor">$ 55.000</span></div>
+                <div class="columna-precios-moderna">
+                    <div class="columna-header">
+                        <span class="badge-afiche badge-grafito">Sin Color</span>
+                        <h3 class="columna-titulo">Retratos a Grafito</h3>
+                    </div>
+
+                    <div class="bloque-precios-moderno">
+                        <div class="categoria-header cat-azul">
+                            <span class="cat-titulo">RETRATOS SIN MARCO</span>
+                            <span class="cat-sub">Solo el arte • Listo para enmarcar</span>
+                        </div>
+                        <div class="items-precios-lista">
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Pequeño (20 x 30 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 25.000</span>
+                            </div>
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Mediano (40 x 50 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 35.000</span>
+                            </div>
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Grande (50 x 70 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 55.000</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="precio-grupo">
-                        <div class="precio-etiqueta" style="background: linear-gradient(90deg, #2b2b2b, #484848, #2b2b2b); border-color: #bdbdbd;">RETRATOS CON MARCO<span style="display:block; font-size:0.75rem; color:#dcdcdc; letter-spacing:0.5px; text-transform:none;">Más presencia • Listo para colgar</span></div>
-                        <div class="precio-caja">
-                            <div class="precio-fila"><span class="medida">Pequeño (20 x 30 cm)</span><span class="puntos"></span><span class="valor">$ 45.000</span></div>
-                            <div class="precio-fila"><span class="medida">Mediano (40 x 50 cm)</span><span class="puntos"></span><span class="valor">$ 65.000</span></div>
-                            <div class="precio-fila"><span class="medida">Grande (50 x 70 cm)</span><span class="puntos"></span><span class="valor">$ 145.000</span></div>
+
+                    <div class="bloque-precios-moderno">
+                        <div class="categoria-header cat-verde">
+                            <span class="cat-titulo">RETRATOS CON MARCO</span>
+                            <span class="cat-sub">Más presencia • Listo para colgar</span>
+                        </div>
+                        <div class="items-precios-lista">
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Pequeño (20 x 30 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 45.000</span>
+                            </div>
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Mediano (40 x 50 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 65.000</span>
+                            </div>
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Grande (50 x 70 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 145.000</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="precio-grupo">
-                        <div class="precio-etiqueta" style="background: linear-gradient(90deg, #1f1f1f, #333333, #1f1f1f); border-color: #e3b04b;">ADICIONALES</div>
-                        <div class="precio-caja">
-                            <div class="precio-fila"><span class="medida">Persona o mascota extra</span><span class="puntos"></span><span class="valor">+$ 5.000 c/u</span></div>
+
+                    <div class="bloque-precios-moderno">
+                        <div class="categoria-header cat-morado">
+                            <span class="cat-titulo">ADICIONALES</span>
+                        </div>
+                        <div class="items-precios-lista">
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Persona o mascota extra</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">+$ 5.000 c/u</span>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div class="cta-precios">
-                        <a href="https://wa.me/56930147316?text=Hola%20RikHunter%20Art,%20quisiera%20reservar%20un%20cuadro%20en%20Blanco%20y%20Negro" target="_blank" rel="noopener" class="btn-oro-animado">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icono-wa-btn">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                            </svg>
-                            ¡Quiero Reservar mi cuadro!
-                        </a>
-                    </div>
+
+                    <a href="https://wa.me/56930147316?text=Hola%20RikHunter%20Art,%20quisiera%20reservar%20un%20cuadro%20en%20Blanco%20y%20Negro" target="_blank" rel="noopener" class="btn-wa-moderno" style="margin-top: 1.5rem;">
+                        <svg viewBox="0 0 24 24" class="btn-wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                        <span>Reservar Blanco y Negro</span>
+                    </a>
                 </div>
 
                 <!-- COLUMNA A COLOR -->
-                <div class="precios-lista" style="flex: 1 1 340px; min-width: 300px; max-width: 440px; background: rgba(0,0,0,0.22); border: 1px solid rgba(227,176,75,0.15); border-radius: 18px; padding: 1.8rem 1.2rem; margin-bottom: 1.5rem;">
-                    <h2 class="precios-titulo" style="text-align:center; color:#e3b04b; margin-bottom:1.2rem;">RETRATOS A <span style="color:#fcebb6">COLOR</span></h2>
-                    
-                    <div class="precio-grupo">
-                        <div class="precio-etiqueta">RETRATOS SIN MARCO (A COLOR)<span style="display:block; font-size:0.75rem; color:#fcebb6; letter-spacing:0.5px; text-transform:none;">Solo el arte • Listo para enmarcar</span></div>
-                        <div class="precio-caja">
-                            <div class="precio-fila"><span class="medida">Pequeño (20 x 30 cm)</span><span class="puntos"></span><span class="valor">$ 45.000</span></div>
-                            <div class="precio-fila"><span class="medida">Mediano (40 x 50 cm)</span><span class="puntos"></span><span class="valor">$ 55.000</span></div>
-                            <div class="precio-fila"><span class="medida">Grande (50 x 70 cm)</span><span class="puntos"></span><span class="valor">$ 115.000</span></div>
-                        </div>
+                <div class="columna-precios-moderna">
+                    <div class="columna-header">
+                        <span class="badge-afiche badge-color">A Color</span>
+                        <h3 class="columna-titulo">Retratos a Color</h3>
                     </div>
-                    
-                    <div class="precio-grupo">
-                        <div class="precio-etiqueta">RETRATOS CON MARCO (SIMPLE)<span style="display:block; font-size:0.75rem; color:#fcebb6; letter-spacing:0.5px; text-transform:none;">Más presencia • Listo para colgar</span></div>
-                        <div class="precio-caja">
-                            <div class="precio-fila"><span class="medida">Pequeño (20 x 30 cm)</span><span class="puntos"></span><span class="valor">$ 65.000</span></div>
-                            <div class="precio-fila"><span class="medida">Mediano (40 x 50 cm)</span><span class="puntos"></span><span class="valor">$ 85.000</span></div>
-                            <div class="precio-fila"><span class="medida">Grande (50 x 70 cm)</span><span class="puntos"></span><span class="valor">$ 165.000</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="precio-grupo">
-                        <div class="precio-etiqueta">ADICIONALES</div>
-                        <div class="precio-caja">
-                            <div class="precio-fila"><span class="medida">Persona o mascota adicional</span><span class="puntos"></span><span class="valor">Consultar vía WhatsApp</span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="cta-precios">
-                        <a href="https://wa.me/56930147316?text=Hola%20RikHunter%20Art,%20quisiera%20reservar%20un%20cuadro%20a%20Color" target="_blank" rel="noopener" class="btn-oro-animado">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="icono-wa-btn">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
-                            </svg>
-                            ¡Quiero Reservar mi cuadro!
-                        </a>
-                    </div>
-                </div>
 
+                    <div class="bloque-precios-moderno">
+                        <div class="categoria-header cat-azul">
+                            <span class="cat-titulo">RETRATOS SIN MARCO (A COLOR)</span>
+                            <span class="cat-sub">Solo el arte • Listo para enmarcar</span>
+                        </div>
+                        <div class="items-precios-lista">
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Pequeño (20 x 30 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 45.000</span>
+                            </div>
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Mediano (40 x 50 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 55.000</span>
+                            </div>
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Grande (50 x 70 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 115.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloque-precios-moderno">
+                        <div class="categoria-header cat-verde">
+                            <span class="cat-titulo">RETRATOS CON MARCO (SIMPLE)</span>
+                            <span class="cat-sub">Más presencia • Listo para colgar</span>
+                        </div>
+                        <div class="items-precios-lista">
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Pequeño (20 x 30 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 65.000</span>
+                            </div>
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Mediano (40 x 50 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 85.000</span>
+                            </div>
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Grande (50 x 70 cm)</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">$ 165.000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bloque-precios-moderno">
+                        <div class="categoria-header cat-morado">
+                            <span class="cat-titulo">ADICIONALES</span>
+                        </div>
+                        <div class="items-precios-lista">
+                            <div class="fila-precio-moderna">
+                                <span class="item-medida">Persona o mascota extra</span>
+                                <span class="linea-puntos"></span>
+                                <span class="item-precio">Consultar WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://wa.me/56930147316?text=Hola%20RikHunter%20Art,%20quisiera%20reservar%20un%20cuadro%20a%20Color" target="_blank" rel="noopener" class="btn-wa-moderno" style="margin-top: 1.5rem;">
+                        <svg viewBox="0 0 24 24" class="btn-wa-icon"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.885-9.885 9.885m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                    <span>Reservar a Color</span>
+                </a>
             </div>
         </div>
     </section>
